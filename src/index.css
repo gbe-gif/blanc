@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Nanum Myeongjo", serif;
+  --color-antique-bg: #1A1A1A;
+  --color-antique-text: #EAEAEA;
+  --color-antique-point-red: #8B0000;
+  --color-antique-point-blue: #B0C4DE;
+  --color-antique-nav: #111111;
+  --color-antique-border: #444444;
+}
+
+body {
+  background-color: var(--color-antique-bg);
+  color: var(--color-antique-text);
+  font-family: var(--font-serif);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4 {
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+/* Custom scrollbar for maintaining the antique feel */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-antique-bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-antique-border);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-antique-point-blue);
+}
