@@ -72,8 +72,13 @@ const WorldviewPage = () => (
 
     <section className="bg-antique-point-red/10 p-6 border-y border-antique-point-red">
       <h3 className="text-xl text-antique-point-blue mb-3">◇ 역사의 뒤안길로 사라진 자들</h3>
-      <p className="text-sm italic text-gray-300">
-        제국과 패권 경쟁을 벌이던 동쪽의 '아우렐리아 제국(419년)', 정령들의 보금자리 '엘프하임(415년)', 마도왕국 '루멘가르드(413년)' 등 모든 국가는 블란테스의 철권 아래 복속되거나 잿더미가 됨.
+      <ul className="text-sm italic text-gray-300 space-y-2 list-disc list-inside">
+        <li><span className="font-bold text-gray-200">아우렐리아 제국(419년 복속):</span> 제국과 패권 경쟁</li>
+        <li><span className="font-bold text-gray-200">엘프하임(415년 멸망):</span> 정령들의 보금자리</li>
+        <li><span className="font-bold text-gray-200">루멘가르드(413년 멸망):</span> 화려했던 마도왕국</li>
+      </ul>
+      <p className="text-sm italic text-gray-300 mt-4 pl-1">
+        그 외 모든 국가는 블란테스의 철권 아래 복속되거나 잿더미가 됨.
       </p>
     </section>
   </motion.div>
@@ -87,8 +92,10 @@ const ProfilePage = () => (
     className="space-y-8 pb-32"
   >
     <section className="text-center space-y-2">
-      <h2 className="text-3xl text-antique-point-blue tracking-widest font-extrabold uppercase">세를리안 글라우코스 드 블란테스</h2>
-      <p className="italic text-antique-point-red text-lg italic pr-4">"제 유일한 안식처이자 구원인 걸요."</p>
+      <h2 className="text-3xl text-antique-point-blue tracking-widest font-extrabold uppercase leading-snug">
+        세를리안<br />글라우코스 드 블란테스
+      </h2>
+      <p className="italic text-antique-point-red text-lg">"제 유일한 안식처이자 구원인 걸요."</p>
     </section>
 
     <div className="flex flex-col items-center">
@@ -110,12 +117,19 @@ const ProfilePage = () => (
           <span className="text-gray-200">22세 / 남성</span>
         </div>
         <div className="flex items-center gap-4 border-b border-antique-border pb-2">
-          <span className="text-antique-point-red font-bold w-24">신분</span>
-          <span className="text-gray-200">블란테스 제국 황제 (의붓 남동생)</span>
+          <span className="text-antique-point-red font-bold w-24 flex-shrink-0">신분</span>
+          <span className="text-gray-200 leading-relaxed">
+            블란테스 제국 황제<br />
+            <span className="text-sm text-gray-400">(당신의 의붓 남동생)</span>
+          </span>
         </div>
-        <div className="flex items-center gap-4 border-b border-antique-border pb-2">
-          <span className="text-antique-point-red font-bold w-24">호칭</span>
-          <span className="text-gray-200">공석: '황후' / 사석: '누님' 혹은 '형님' (그는 오직 당신에 의해 '셀'이라 불림)</span>
+        <div className="flex items-start gap-4 border-b border-antique-border pb-2">
+          <span className="text-antique-point-red font-bold w-24 flex-shrink-0">호칭</span>
+          <ul className="text-gray-200 text-sm leading-relaxed list-disc list-inside space-y-1">
+            <li>공석: 황후</li>
+            <li>사석: 누님/형님</li>
+            <li className="list-none text-gray-400 text-xs mt-1 ml-1">(당신에게만 '셀'이라는 애칭을 허용)</li>
+          </ul>
         </div>
         <div className="flex items-start gap-4 border-b border-antique-border pb-2">
           <span className="text-antique-point-red font-bold w-24 flex-shrink-0">외형</span>
@@ -139,11 +153,19 @@ const ProfilePage = () => (
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div className="border border-antique-point-red/30 p-4 bg-antique-point-red/5 rounded">
           <h4 className="text-antique-point-red font-bold mb-2">타인에게는</h4>
-          <p className="text-sm text-gray-300">피도 눈물도 없는 오만한 폭군. 건조하고 싸늘한 하대("꺼져라")로 일관. '잿빛 악몽', '인간 재앙'으로 불림.</p>
+          <ul className="text-sm text-gray-300 list-disc list-inside space-y-1.5">
+            <li>피도 눈물도 없는 오만한 폭군</li>
+            <li>건조하고 싸늘한 하대로 일관</li>
+            <li>악명: 잿빛 악몽, 인간 재앙</li>
+          </ul>
         </div>
         <div className="border border-antique-point-blue/30 p-4 bg-antique-point-blue/5 rounded">
           <h4 className="text-antique-point-blue font-bold mb-2">당신에게는</h4>
-          <p className="text-sm text-gray-300">한없이 나긋나긋하고 애절한 태도. 사랑과 관심에 병적으로 집착하며, 거대한 몸을 둥글게 말고 기대어 옴.</p>
+          <ul className="text-sm text-gray-300 list-disc list-inside space-y-1.5">
+            <li>한없이 나긋나긋하고 애절한 태도</li>
+            <li>사랑과 관심에 병적으로 집착</li>
+            <li>거대한 몸을 둥글게 말고 기대어 옴</li>
+          </ul>
         </div>
       </div>
     </section>
@@ -317,10 +339,10 @@ export default function App() {
     <div className="min-h-screen bg-antique-bg text-antique-text selection:bg-antique-point-red selection:text-white pb-10">
       {/* Header */}
       <header className="sticky top-0 z-50 bg-antique-bg/90 backdrop-blur-md border-b border-antique-border p-6 text-center shadow-xl">
-        <h1 className="text-2xl md:text-3xl font-extrabold text-antique-point-blue tracking-[0.2em] mb-2 drop-shadow-[0_2px_4px_rgba(0,0,0,1)]">
-          블란테스 제국 : 잿빛 악몽의 온기
+        <h1 className="text-2xl md:text-3xl font-extrabold text-antique-point-blue tracking-[0.2em] mb-2 drop-shadow-[0_2px_4px_rgba(0,0,0,1)] leading-snug">
+          블란테스 제국<br />:잿빛 악몽의 온기
         </h1>
-        <p className="text-xs md:text-sm text-gray-500 font-mono tracking-widest uppercase">
+        <p className="text-xs md:text-sm text-gray-500 font-mono tracking-widest uppercase mt-1">
           17th Century Flintlock Fantasy Roleplay
         </p>
       </header>
